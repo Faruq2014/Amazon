@@ -8,5 +8,11 @@ public class AmazonTest {
 	public void appTest() {
 		System.out.println("hello");
 	}
+	
+	@Test
+	private void loginOne() {
+		System.out.println("new branch");
+
+	}
 
 }
