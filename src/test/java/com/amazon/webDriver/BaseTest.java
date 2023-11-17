@@ -1,17 +1,21 @@
 package com.amazon.webDriver;
 
+import java.time.Duration;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.Test;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseTest {
-	WebDriver driver;
+	public WebDriver driver;
 	String browser="Chrome";
-	@Test
+	
+	@BeforeMethod
 	public void openApplication() {
 		
 	if(browser.equalsIgnoreCase("chrome")) {
@@ -32,7 +36,15 @@ public class BaseTest {
 		 driver= new ChromeDriver();
 	}
 	driver.get("https://www.amazon.com/");
-	driver.quit();
+	driver.manage().window().maximize();
+	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	
+	}
+	
+	@AfterMethod
+	public void closeApplication() {
+		if(driver !=null) {
+			//driver.quit();
+			}
 	}
 }
