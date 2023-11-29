@@ -1,0 +1,45 @@
+		
+			
+			XPath Function - "starts with"
+				tag[starts-with(@attribute,'beginning values')]
+				//button[starts-with(@id,'u_0_5_')]
+				//*[starts-with(@id,'em')]
+			•	It is to handle dynamic locators
+			XPath Function - "contains"==
+				•	used for dynamic locators
+				•	used for long or compound values
+				//tag[contains(@attribute_name,'attribute_value')]  
+				//input[contains(@id, 'email')]
+			
+			
+			XPath Function - "text()" method
+				//tag[text()='value']
+				//a[text()='Sign Up']
+				Contain text function
+				//tag[contains(text(),'value')]
+				//h2[contains(text(),'Connect with friends')]
+				•	when we have long and compound text values
+				•	when we have dynamic values
+			
+			How to Use And & OR in Selenium XPath
+				and
+				//input[@id='ap_email'] [@name='email1']
+				or
+				//input[@name='email'or @id='ap_email']
+			
+			Xpath index
+					1.	more than one correct xpath
+					2.	you index them from 1 to … [2]
+					 (//*[text()='Sign Up'])[3]
+			
+			Xpath index-Axes
+				(//div[@id='pageFooter']/ul/li)[3]
+				(//*[@id='pageFooterChildren']/ul/li)[2]
+			
+			
+			we will handle the latter
+				XPath Axes Methods (Parent, Child, Self)
+				XPath Axes Methods (descendant, descendant-or-self)
+				 XPath Axes Methods (ancestor, ancestor-or-self)
+				 XPath Axes Methods (following, following-sibling) 
+				XPath Axes Methods (preceding, preceding-sibling)
