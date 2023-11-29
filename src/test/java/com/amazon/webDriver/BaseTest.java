@@ -35,7 +35,9 @@ public class BaseTest {
 		WebDriverManager.chromedriver().setup();	
 		 driver= new ChromeDriver();
 	}
-	driver.get("https://www.amazon.com/");
+	//driver.get("https://www.amazon.com/");
+	driver.get("https://www.facebook.com/");
+	
 	driver.manage().window().maximize();
 	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	
